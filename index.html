@@ -1,79 +1,660 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#702d42">
 <meta name="description" content="Victória & Diogo — 18 de setembro de 2027. Um dia para celebrar o amor.">
 <title>Victória & Diogo | 18.09.2027</title>
+
 <style>
-:root{--wine:#702d42;--wine2:#4b1e2d;--champ:#f4e8d5;--gold:#bd9b68;--ink:#3d3030;--paper:#fffaf4}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
-a{color:inherit}.serif{font-family:Georgia,serif}.sans{font-family:Arial,sans-serif}
-nav{position:sticky;top:0;z-index:10;background:#fffaf4ed;backdrop-filter:blur(10px);border-bottom:1px solid #bd9b6844;display:flex;justify-content:center;gap:clamp(12px,3vw,32px);padding:14px 10px;font:11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
-nav a{text-decoration:none;color:var(--wine)}nav a:hover{text-decoration:underline}
-.hero{min-height:92vh;position:relative;display:grid;place-items:center;text-align:center;overflow:hidden;background:var(--wine2);color:white}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#2b121233,#2b121277),url('assets/foto-casal.jpg') center 43%/cover;filter:saturate(.78)}
-.hero:after{content:"";position:absolute;inset:18px;border:1px solid #e8d4ae99;pointer-events:none}
-.hero-inner{position:relative;z-index:1;padding:60px 24px;text-shadow:0 2px 15px #1d1010}
-.eyebrow{font:11px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#f3dfbd}
-h1{font-size:clamp(48px,9vw,94px);font-weight:normal;line-height:1;margin:20px 0 14px}
-.amp{color:#e6c99c;font-style:italic}.date{font-size:clamp(16px,2.5vw,22px);letter-spacing:.2em;margin:22px 0}
-.hero p{font-style:italic;font-size:20px}.scroll{display:inline-block;margin-top:30px;padding:12px 22px;border:1px solid #e6c99c;color:white;text-decoration:none;font:11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}
-section{padding:82px 20px;scroll-margin-top:54px}.wrap{width:min(100%,980px);margin:auto}.center{text-align:center}.kicker{color:var(--gold);font:11px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase}
-h2{font-weight:normal;color:var(--wine);font-size:clamp(32px,5vw,48px);margin:12px 0 22px}
-.lead{max-width:690px;margin:0 auto;font-size:19px;line-height:1.8}
-.rule{width:70px;height:1px;background:var(--gold);margin:25px auto}
-.countdown{display:flex;justify-content:center;gap:clamp(12px,4vw,38px);margin-top:34px;flex-wrap:wrap}
-.unit{min-width:72px}.unit strong{display:block;font-size:clamp(32px,5vw,48px);font-weight:normal;color:var(--wine)}.unit span{font:10px Arial,sans-serif;letter-spacing:.16em;color:#8b7467;text-transform:uppercase}
-.events{background:var(--champ)}.event-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:35px}
-.event{background:#fffaf4;padding:34px 28px;border:1px solid #bd9b6855;text-align:center}
-.event .symbol{font-size:28px;color:var(--gold)}.event h3{font-size:26px;font-weight:normal;color:var(--wine);margin:14px 0}
-.event .time{font:12px Arial,sans-serif;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
-.event p{line-height:1.7}.maplink{display:inline-block;margin-top:12px;color:var(--wine);font:11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
-.story{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.story img{width:100%;max-height:580px;object-fit:cover;object-position:center;border:8px solid white;box-shadow:0 12px 40px #4b1e2d18}
+:root{
+  --wine:#702d42;
+  --wine2:#4b1e2d;
+  --champ:#f4e8d5;
+  --gold:#bd9b68;
+  --ink:#3d3030;
+  --paper:#fffaf4;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Georgia,'Times New Roman',serif
+}
+
+a{color:inherit}
+.serif{font-family:Georgia,serif}
+.sans{font-family:Arial,sans-serif}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#fffaf4ed;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #bd9b6844;
+  display:flex;
+  justify-content:center;
+  gap:clamp(12px,3vw,32px);
+  padding:14px 10px;
+  font:11px Arial,sans-serif;
+  letter-spacing:.12em;
+  text-transform:uppercase
+}
+
+nav a{text-decoration:none;color:var(--wine)}
+nav a:hover{text-decoration:underline}
+
+.hero{
+  min-height:92vh;
+  position:relative;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  overflow:hidden;
+  background:var(--wine2);
+  color:white
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,#2b121233,#2b121277),url('assets/foto-casal.jpg') center 43%/cover;
+  filter:saturate(.78)
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px solid #e8d4ae99;
+  pointer-events:none
+}
+
+.hero-inner{
+  position:relative;
+  z-index:1;
+  padding:60px 24px;
+  text-shadow:0 2px 15px #1d1010
+}
+
+.eyebrow{
+  font:11px Arial,sans-serif;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:#f3dfbd
+}
+
+h1{
+  font-size:clamp(48px,9vw,94px);
+  font-weight:normal;
+  line-height:1;
+  margin:20px 0 14px
+}
+
+.amp{color:#e6c99c;font-style:italic}
+.date{
+  font-size:clamp(16px,2.5vw,22px);
+  letter-spacing:.2em;
+  margin:22px 0
+}
+
+.hero p{font-style:italic;font-size:20px}
+
+.scroll{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 22px;
+  border:1px solid #e6c99c;
+  color:white;
+  text-decoration:none;
+  font:11px Arial,sans-serif;
+  letter-spacing:.16em;
+  text-transform:uppercase
+}
+
+section{
+  padding:82px 20px;
+  scroll-margin-top:54px
+}
+
+.wrap{width:min(100%,980px);margin:auto}
+.center{text-align:center}
+
+.kicker{
+  color:var(--gold);
+  font:11px Arial,sans-serif;
+  letter-spacing:.25em;
+  text-transform:uppercase
+}
+
+h2{
+  font-weight:normal;
+  color:var(--wine);
+  font-size:clamp(32px,5vw,48px);
+  margin:12px 0 22px
+}
+
+.lead{
+  max-width:690px;
+  margin:0 auto;
+  font-size:19px;
+  line-height:1.8
+}
+
+.rule{
+  width:70px;
+  height:1px;
+  background:var(--gold);
+  margin:25px auto
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:clamp(12px,4vw,38px);
+  margin-top:34px;
+  flex-wrap:wrap
+}
+
+.unit{min-width:72px}
+
+.unit strong{
+  display:block;
+  font-size:clamp(32px,5vw,48px);
+  font-weight:normal;
+  color:var(--wine)
+}
+
+.unit span{
+  font:10px Arial,sans-serif;
+  letter-spacing:.16em;
+  color:#8b7467;
+  text-transform:uppercase
+}
+
+.events{background:var(--champ)}
+
+.event-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+  margin-top:35px
+}
+
+.event{
+  background:#fffaf4;
+  padding:34px 28px;
+  border:1px solid #bd9b6855;
+  text-align:center
+}
+
+.event .symbol{font-size:28px;color:var(--gold)}
+
+.event h3{
+  font-size:26px;
+  font-weight:normal;
+  color:var(--wine);
+  margin:14px 0
+}
+
+.event .time{
+  font:12px Arial,sans-serif;
+  letter-spacing:.18em;
+  color:var(--gold);
+  text-transform:uppercase
+}
+
+.event p{line-height:1.7}
+
+.maplink{
+  display:inline-block;
+  margin-top:12px;
+  color:var(--wine);
+  font:11px Arial,sans-serif;
+  letter-spacing:.12em;
+  text-transform:uppercase
+}
+
+.story{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center
+}
+
+.story img{
+  width:100%;
+  max-height:580px;
+  object-fit:cover;
+  object-position:center;
+  border:8px solid white;
+  box-shadow:0 12px 40px #4b1e2d18
+}
+
 .story-copy p{font-size:17px;line-height:1.8}
-.form-wrap{max-width:650px;margin:28px auto 0;background:white;padding:30px;border:1px solid #bd9b6855}
-label{display:block;text-align:left;font:12px Arial,sans-serif;color:var(--wine);margin:16px 0 7px}
-input,select,textarea{width:100%;padding:13px;border:1px solid #d9c9b7;background:#fffdfa;font:15px Arial,sans-serif;color:var(--ink);border-radius:0}
-button,.btn{display:inline-block;border:0;background:var(--wine);color:white;padding:14px 24px;margin-top:20px;font:11px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;text-decoration:none}
+
+.form-wrap{
+  max-width:650px;
+  margin:28px auto 0;
+  background:white;
+  padding:30px;
+  border:1px solid #bd9b6855
+}
+
+label{
+  display:block;
+  text-align:left;
+  font:12px Arial,sans-serif;
+  color:var(--wine);
+  margin:16px 0 7px
+}
+
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #d9c9b7;
+  background:#fffdfa;
+  font:15px Arial,sans-serif;
+  color:var(--ink);
+  border-radius:0
+}
+
+button,.btn{
+  display:inline-block;
+  border:0;
+  background:var(--wine);
+  color:white;
+  padding:14px 24px;
+  margin-top:20px;
+  font:11px Arial,sans-serif;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  cursor:pointer;
+  text-decoration:none
+}
+
 button:hover,.btn:hover{background:var(--wine2)}
-.gifts{background:var(--champ)}.gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
-.gift{background:#fffaf4;border:1px solid #bd9b6855;padding:24px 18px;text-align:center}.gift h3{font-weight:normal;color:var(--wine);font-size:21px}.gift strong{font:18px Arial,sans-serif;color:var(--gold)}
-.gift button{margin-top:14px;padding:11px 15px}.pixnote{max-width:650px;margin:28px auto 0;font-size:15px;line-height:1.7;text-align:center}
-footer{background:var(--wine2);color:var(--champ);text-align:center;padding:54px 20px}footer h2{color:var(--champ);font-style:italic}
-#status{font:13px Arial,sans-serif;margin-top:14px}
-@media(max-width:680px){nav{overflow:auto;justify-content:flex-start;white-space:nowrap}.event-grid,.story,.gift-grid{grid-template-columns:1fr}.story img{max-height:460px}.hero{min-height:82vh}.form-wrap{padding:20px}}
+
+.gifts{background:var(--champ)}
+
+.gift-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:32px
+}
+
+.gift{
+  background:#fffaf4;
+  border:1px solid #bd9b6855;
+  padding:24px 18px;
+  text-align:center
+}
+
+.gift h3{
+  font-weight:normal;
+  color:var(--wine);
+  font-size:21px
+}
+
+.gift strong{
+  font:18px Arial,sans-serif;
+  color:var(--gold)
+}
+
+.gift button{margin-top:14px;padding:11px 15px}
+
+.pixnote{
+  max-width:650px;
+  margin:28px auto 0;
+  font-size:15px;
+  line-height:1.7;
+  text-align:center
+}
+
+.pix-qr{
+  display:block;
+  width:min(220px,70vw);
+  max-width:100%;
+  height:auto;
+  aspect-ratio:1/1;
+  object-fit:contain;
+  margin:22px auto;
+  padding:10px;
+  background:#fff;
+  border:1px solid #bd9b6855
+}
+
+footer{
+  background:var(--wine2);
+  color:var(--champ);
+  text-align:center;
+  padding:54px 20px
+}
+
+footer h2{
+  color:var(--champ);
+  font-style:italic
+}
+
+#status{
+  font:13px Arial,sans-serif;
+  margin-top:14px
+}
+
+@media(max-width:680px){
+  nav{
+    overflow:auto;
+    justify-content:flex-start;
+    white-space:nowrap
+  }
+
+  .event-grid,.story,.gift-grid{
+    grid-template-columns:1fr
+  }
+
+  .story img{max-height:460px}
+  .hero{min-height:82vh}
+  .form-wrap{padding:20px}
+}
 </style>
 </head>
+
 <body>
-<nav><a href="#inicio">Início</a><a href="#historia">Nossa história</a><a href="#celebracao">Celebração</a><a href="#rsvp">Presença</a><a href="#presentes">Presentes</a></nav>
-<header class="hero" id="inicio"><div class="hero-inner"><div class="eyebrow">Com a bênção de Deus e ao lado de quem amamos</div><h1>Victória <span class="amp">&</span> Diogo</h1><div class="date">18 · 09 · 2027</div><p>Um dia para celebrar o amor</p><a class="scroll" href="#historia">Conheça nosso convite</a></div></header>
-<section class="center"><div class="wrap"><div class="kicker">Reserve esta data</div><h2>Estamos contando os dias</h2><p class="lead">Será uma alegria compartilhar esse momento tão especial com você.</p><div class="countdown" id="countdown"><div class="unit"><strong>—</strong><span>Dias</span></div><div class="unit"><strong>—</strong><span>Horas</span></div><div class="unit"><strong>—</strong><span>Minutos</span></div><div class="unit"><strong>—</strong><span>Segundos</span></div></div></div></section>
-<section id="historia"><div class="wrap story"><img src="assets/foto-casal.jpg" alt="Victória e Diogo juntos em frente à igreja"><div class="story-copy"><div class="kicker">Nossa história</div><h2>Dois caminhos, uma só história</h2><p>O amor é feito de encontros, cuidado, companheirismo e da escolha diária de caminhar lado a lado. Agora, queremos celebrar esse novo capítulo diante de Deus e das pessoas que fazem parte da nossa história.</p><p>“O amor é paciente, é bondoso... O amor jamais acabará!”</p><p><em>1 Coríntios 13:4–8</em></p></div></div></section>
-<section class="events" id="celebracao"><div class="wrap center"><div class="kicker">Cerimônia & recepção</div><h2>Será uma alegria ter você conosco</h2><div class="event-grid">
-<article class="event"><div class="symbol">✧</div><div class="time">19h · Cerimônia</div><h3>Catedral Basílica<br>São Luiz Gonzaga</h3><p>Rua Cidade Atlântida, 34<br>Centro · Novo Hamburgo/RS</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Catedral+Bas%C3%ADlica+S%C3%A3o+Luiz+Gonzaga+Novo+Hamburgo">Como chegar ↗</a></article>
-<article class="event"><div class="symbol">✧</div><div class="time">20h30 · Recepção</div><h3>Facefest</h3><p>Rua Amapá, 150<br>Mathias Velho · Canoas/RS</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Facefest+Rua+Amap%C3%A1+150+Canoas">Como chegar ↗</a></article>
-</div><p style="margin-top:24px;font-style:italic">Esperamos você para celebrar conosco!</p></div></section>
-<section id="rsvp"><div class="wrap center"><div class="kicker">Confirmação de presença</div><h2>Você vem celebrar com a gente?</h2><p class="lead">Por favor, confirme sua presença até 20 de junho de 2027.</p>
-<div class="form-wrap"><form id="rsvpForm"><label for="nome">Nome completo</label><input id="nome" name="nome" required placeholder="Digite seu nome"><label for="telefone">WhatsApp (opcional)</label><input id="telefone" name="telefone" placeholder="(00) 00000-0000"><label for="presenca">Você poderá comparecer?</label><select id="presenca" name="presenca" required><option value="">Selecione</option><option value="Confirmado">Sim, estarei presente!</option><option value="Recusou">Infelizmente não poderei ir</option></select><label for="adultos">Quantidade de adultos (incluindo você)</label><input id="adultos" name="adultos" type="number" min="0" max="10" value="1"><label for="criancas">Quantidade de crianças</label><input id="criancas" name="criancas" type="number" min="0" max="10" value="0"><label for="restricao">Restrição alimentar ou observação (opcional)</label><textarea id="restricao" name="restricao" rows="3"></textarea><button type="submit">Enviar confirmação</button><div id="status" role="status">O formulário será conectado à planilha dos convidados na etapa de publicação.</div></form></div></div></section>
-<section class="gifts" id="presentes"><div class="wrap center"><div class="kicker">Lista de presentes</div><h2>Faça parte dos nossos sonhos</h2><p class="lead">Sua presença é o nosso maior presente. Mas, se desejar nos presentear, preparamos algumas lembranças simbólicas para contribuir com o início da nossa vida a dois.</p>
-<div class="gift-grid">
-<div class="gift"><h3>Um jantar especial</h3><strong>R$ 150</strong><br><button onclick="gift('Um jantar especial',150)">Presentear</button></div>
-<div class="gift"><h3>Uma noite romântica</h3><strong>R$ 250</strong><br><button onclick="gift('Uma noite romântica',250)">Presentear</button></div>
-<div class="gift"><h3>Um pedacinho da lua de mel</h3><strong>R$ 300</strong><br><button onclick="gift('Um pedacinho da lua de mel',300)">Presentear</button></div>
-<div class="gift"><h3>Um sonho para nosso lar</h3><strong>R$ 500</strong><br><button onclick="gift('Um sonho para nosso lar',500)">Presentear</button></div>
-<div class="gift"><h3>Uma experiência a dois</h3><strong>R$ 200</strong><br><button onclick="gift('Uma experiência a dois',200)">Presentear</button></div>
-<div class="gift"><h3>Presente livre</h3><strong>Você escolhe</strong><br><button onclick="gift('Presente livre',0)">Presentear</button></div>
-</div><div class="pixnote"><p>Ao escolher um presente, você poderá realizar a contribuição via PIX. Os dados de pagamento serão disponibilizados aqui após definirmos uma chave PIX segura para divulgação.</p><p><strong>Dados PIX serão publicados após a configuração final.</strong></p></div></div></section>
-<section class="center"><div class="wrap"><div class="kicker">Compartilhe este momento</div><h2>Esperamos você!</h2><p class="lead">Envie nosso site para quem vai celebrar esse dia ao seu lado.</p><button onclick="share()">Compartilhar pelo WhatsApp</button></div></section>
-<footer><div class="kicker">Com carinho</div><h2>Victória & Diogo</h2><p>18 de setembro de 2027</p><p style="font-size:12px">“O amor jamais acabará.” · 1 Coríntios 13:8</p></footer>
+
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#historia">Nossa história</a>
+  <a href="#celebracao">Celebração</a>
+  <a href="#rsvp">Presença</a>
+  <a href="#presentes">Presentes</a>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="hero-inner">
+    <div class="eyebrow">Com a bênção de Deus e ao lado de quem amamos</div>
+    <h1>Victória <span class="amp">&</span> Diogo</h1>
+    <div class="date">18 · 09 · 2027</div>
+    <p>Um dia para celebrar o amor</p>
+    <a class="scroll" href="#historia">Conheça nosso convite</a>
+  </div>
+</header>
+
+<section class="center">
+  <div class="wrap">
+    <div class="kicker">Reserve esta data</div>
+    <h2>Estamos contando os dias</h2>
+    <p class="lead">Será uma alegria compartilhar esse momento tão especial com você.</p>
+
+    <div class="countdown" id="countdown">
+      <div class="unit"><strong>—</strong><span>Dias</span></div>
+      <div class="unit"><strong>—</strong><span>Horas</span></div>
+      <div class="unit"><strong>—</strong><span>Minutos</span></div>
+      <div class="unit"><strong>—</strong><span>Segundos</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="historia">
+  <div class="wrap story">
+    <img src="assets/foto-casal.jpg" alt="Victória e Diogo juntos em frente à igreja">
+
+    <div class="story-copy">
+      <div class="kicker">Nossa história</div>
+      <h2>Dois caminhos, uma só história</h2>
+      <p>O amor é feito de encontros, cuidado, companheirismo e da escolha diária de caminhar lado a lado. Agora, queremos celebrar esse novo capítulo diante de Deus e das pessoas que fazem parte da nossa história.</p>
+      <p>“O amor é paciente, é bondoso... O amor jamais acabará!”</p>
+      <p><em>1 Coríntios 13:4–8</em></p>
+    </div>
+  </div>
+</section>
+
+<section class="events" id="celebracao">
+  <div class="wrap center">
+    <div class="kicker">Cerimônia & recepção</div>
+    <h2>Será uma alegria ter você conosco</h2>
+
+    <div class="event-grid">
+      <article class="event">
+        <div class="symbol">✧</div>
+        <div class="time">19h · Cerimônia</div>
+        <h3>Catedral Basílica<br>São Luiz Gonzaga</h3>
+        <p>Rua Cidade Atlântida, 34<br>Centro · Novo Hamburgo/RS</p>
+        <a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Catedral+Bas%C3%ADlica+S%C3%A3o+Luiz+Gonzaga+Novo+Hamburgo">Como chegar ↗</a>
+      </article>
+
+      <article class="event">
+        <div class="symbol">✧</div>
+        <div class="time">20h30 · Recepção</div>
+        <h3>Facefest</h3>
+        <p>Rua Amapá, 150<br>Mathias Velho · Canoas/RS</p>
+        <a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Facefest+Rua+Amap%C3%A1+150+Canoas">Como chegar ↗</a>
+      </article>
+    </div>
+
+    <p style="margin-top:24px;font-style:italic">Esperamos você para celebrar conosco!</p>
+  </div>
+</section>
+
+<section id="rsvp">
+  <div class="wrap center">
+    <div class="kicker">Confirmação de presença</div>
+    <h2>Você vem celebrar com a gente?</h2>
+    <p class="lead">Por favor, confirme sua presença até 20 de junho de 2027.</p>
+
+    <div class="form-wrap">
+      <form id="rsvpForm">
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" required placeholder="Digite seu nome">
+
+        <label for="telefone">WhatsApp (opcional)</label>
+        <input id="telefone" name="telefone" placeholder="(00) 00000-0000">
+
+        <label for="presenca">Você poderá comparecer?</label>
+        <select id="presenca" name="presenca" required>
+          <option value="">Selecione</option>
+          <option value="Confirmado">Sim, estarei presente!</option>
+          <option value="Recusou">Infelizmente não poderei ir</option>
+        </select>
+
+        <label for="adultos">Quantidade de adultos (incluindo você)</label>
+        <input id="adultos" name="adultos" type="number" min="0" max="10" value="1">
+
+        <label for="criancas">Quantidade de crianças</label>
+        <input id="criancas" name="criancas" type="number" min="0" max="10" value="0">
+
+        <label for="restricao">Restrição alimentar ou observação (opcional)</label>
+        <textarea id="restricao" name="restricao" rows="3"></textarea>
+
+        <button type="submit">Enviar confirmação</button>
+
+        <div id="status" role="status">
+          O formulário será conectado à planilha dos convidados na etapa de publicação.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="gifts" id="presentes">
+  <div class="wrap center">
+    <div class="kicker">Lista de presentes</div>
+    <h2>Faça parte dos nossos sonhos</h2>
+
+    <p class="lead">
+      Sua presença é o nosso maior presente. Mas, se desejar nos presentear,
+      preparamos algumas lembranças simbólicas para contribuir com o início
+      da nossa vida a dois.
+    </p>
+
+    <div class="gift-grid">
+
+      <div class="gift">
+        <h3>Um jantar especial</h3>
+        <strong>R$ 150</strong><br>
+        <button onclick="gift('Um jantar especial',150)">Presentear</button>
+      </div>
+
+      <div class="gift">
+        <h3>Uma noite romântica</h3>
+        <strong>R$ 250</strong><br>
+        <button onclick="gift('Uma noite romântica',250)">Presentear</button>
+      </div>
+
+      <div class="gift">
+        <h3>Um pedacinho da lua de mel</h3>
+        <strong>R$ 300</strong><br>
+        <button onclick="gift('Um pedacinho da lua de mel',300)">Presentear</button>
+      </div>
+
+      <div class="gift">
+        <h3>Um sonho para nosso lar</h3>
+        <strong>R$ 500</strong><br>
+        <button onclick="gift('Um sonho para nosso lar',500)">Presentear</button>
+      </div>
+
+      <div class="gift">
+        <h3>Uma experiência a dois</h3>
+        <strong>R$ 200</strong><br>
+        <button onclick="gift('Uma experiência a dois',200)">Presentear</button>
+      </div>
+
+      <div class="gift">
+        <h3>Presente livre</h3>
+        <strong>Você escolhe</strong><br>
+        <button onclick="gift('Presente livre',0)">Presentear</button>
+      </div>
+
+    </div>
+
+    <div class="pixnote">
+      <p>
+        Se desejar contribuir com nossos sonhos, você pode acessar o pagamento
+        pelo C6 usando o botão abaixo ou escanear o QR Code.
+      </p>
+
+      <img
+        class="pix-qr"
+        src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fcobranca.c6pix.com.br%2F01M6PEE2N0M8C2Y1801K12FADD"
+        alt="QR Code para abrir o pagamento do casamento pelo C6"
+        width="300"
+        height="300"
+        loading="lazy"
+      >
+
+      <a
+        class="btn"
+        href="https://cobranca.c6pix.com.br/01M6PEE2N0M8C2Y1801K12FADD"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Acessar pagamento pelo C6
+      </a>
+
+      <p>
+        Os valores dos presentes são sugestões. O pagamento será realizado
+        no ambiente do C6.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="center">
+  <div class="wrap">
+    <div class="kicker">Compartilhe este momento</div>
+    <h2>Esperamos você!</h2>
+    <p class="lead">Envie nosso site para quem vai celebrar esse dia ao seu lado.</p>
+    <button onclick="share()">Compartilhar pelo WhatsApp</button>
+  </div>
+</section>
+
+<footer>
+  <div class="kicker">Com carinho</div>
+  <h2>Victória & Diogo</h2>
+  <p>18 de setembro de 2027</p>
+  <p style="font-size:12px">“O amor jamais acabará.” · 1 Coríntios 13:8</p>
+</footer>
+
 <script>
-const target=new Date('2027-09-18T19:00:00-03:00');
-function tick(){let n=Math.max(0,target-new Date()),d=Math.floor(n/86400000),h=Math.floor(n%86400000/3600000),m=Math.floor(n%3600000/60000),s=Math.floor(n%60000/1000);document.getElementById('countdown').innerHTML=[[d,'Dias'],[h,'Horas'],[m,'Minutos'],[s,'Segundos']].map(x=>`<div class="unit"><strong>${x[0]}</strong><span>${x[1]}</span></div>`).join('')}
-tick();setInterval(tick,1000);
-const RSVP_ENDPOINT=''; // Cole aqui a URL /exec do Google Apps Script após implantação
-document.getElementById('rsvpForm').addEventListener('submit',async e=>{e.preventDefault();const data=Object.fromEntries(new FormData(e.target));if(!RSVP_ENDPOINT){document.getElementById('status').textContent='O formulário será ativado após conectarmos a planilha Google e testarmos o envio.';return;}try{await fetch(RSVP_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(data)});document.getElementById('status').textContent='Obrigado! Sua resposta foi enviada.';e.target.reset()}catch(err){document.getElementById('status').textContent='Não foi possível enviar agora. Tente novamente mais tarde.'}});
-function gift(name,value){alert('Presente: '+name+(value?' — R$ '+value+',00':'')+'. A chave PIX será adicionada após configuração.');}
-function share(){const url=location.href;const msg='Com carinho, convidamos você para o casamento de Victória & Diogo, em 18/09/2027! Veja nosso site: '+url;window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank','noopener');}
-</script></body></html>
+const target = new Date('2027-09-18T19:00:00-03:00');
+
+function tick(){
+  let n = Math.max(0,target-new Date());
+  let d = Math.floor(n/86400000);
+  let h = Math.floor(n%86400000/3600000);
+  let m = Math.floor(n%3600000/60000);
+  let s = Math.floor(n%60000/1000);
+
+  document.getElementById('countdown').innerHTML =
+    [[d,'Dias'],[h,'Horas'],[m,'Minutos'],[s,'Segundos']]
+    .map(x => `<div class="unit"><strong>${x[0]}</strong><span>${x[1]}</span></div>`)
+    .join('');
+}
+
+tick();
+setInterval(tick,1000);
+
+// A integração com a planilha ainda precisa ser configurada.
+const RSVP_ENDPOINT = '';
+
+document.getElementById('rsvpForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+
+  const data = Object.fromEntries(new FormData(e.target));
+
+  if(!RSVP_ENDPOINT){
+    document.getElementById('status').textContent =
+      'A confirmação de presença ainda está sendo configurada. Por favor, tente novamente mais tarde.';
+    return;
+  }
+
+  try{
+    await fetch(RSVP_ENDPOINT,{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:new URLSearchParams(data)
+    });
+
+    document.getElementById('status').textContent =
+      'Obrigado! Sua resposta foi enviada.';
+
+    e.target.reset();
+
+  }catch(err){
+    document.getElementById('status').textContent =
+      'Não foi possível enviar agora. Tente novamente mais tarde.';
+  }
+});
+
+// Todos os presentes direcionam ao link de pagamento do C6.
+function gift(name,value){
+  window.open(
+    'https://cobranca.c6pix.com.br/01M6PEE2N0M8C2Y1801K12FADD',
+    '_blank',
+    'noopener,noreferrer'
+  );
+}
+
+function share(){
+  const url = location.href;
+  const msg = 'Com carinho, convidamos você para o casamento de Victória & Diogo, em 18/09/2027! Veja nosso site: '+url;
+
+  window.open(
+    'https://wa.me/?text='+encodeURIComponent(msg),
+    '_blank',
+    'noopener'
+  );
+}
+</script>
+
+</body>
+</html>
