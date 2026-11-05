@@ -35,14 +35,14 @@ a{color:inherit}
 .serif{font-family:Georgia,serif}
 .sans{font-family:Arial,sans-serif}
 
-/* Elementos florais decorativos */
+/* ARRANJOS FLORAIS */
 .floral{
   position:absolute;
   width:clamp(105px,17vw,190px);
   height:auto;
-  z-index:2;
+  z-index:0;
   pointer-events:none;
-  opacity:.9;
+  opacity:.82;
 }
 
 .floral-top-left{top:0;left:0}
@@ -51,6 +51,13 @@ a{color:inherit}
 .floral-bottom-right{bottom:0;right:0;transform:rotate(180deg) scaleX(-1)}
 
 .floral svg{width:100%;height:auto;display:block}
+
+.wrap{
+  width:min(100%,980px);
+  margin:auto;
+  position:relative;
+  z-index:1;
+}
 
 /* Navegação */
 nav{
@@ -112,6 +119,8 @@ nav a:hover{color:var(--gold)}
   pointer-events:none;
 }
 
+.hero .floral{z-index:2}
+
 .hero-inner{
   position:relative;
   z-index:3;
@@ -172,9 +181,9 @@ section{
   position:relative;
   padding:clamp(66px,8vw,100px) 22px;
   scroll-margin-top:65px;
+  overflow:hidden;
 }
 
-.wrap{width:min(100%,980px);margin:auto}
 .center{text-align:center}
 
 .kicker{
@@ -481,7 +490,10 @@ footer:before{
   pointer-events:none;
 }
 
-footer>*{position:relative}
+footer>*{
+  position:relative;
+  z-index:1;
+}
 
 footer h2{
   color:var(--champ);
@@ -508,7 +520,13 @@ footer h2{
   .hero:after{inset:17px}
   .form-wrap{padding:22px}
   section{padding:66px 20px}
+
   .event{padding:34px 22px}
+
+  .floral{
+    width:clamp(76px,25vw,125px);
+    opacity:.72;
+  }
 }
 
 @media(prefers-reduced-motion:reduce){
@@ -520,6 +538,42 @@ footer h2{
 
 <body>
 
+<!-- DESENHO VETORIAL DOS ARRANJOS -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"
+     style="position:absolute;overflow:hidden" aria-hidden="true">
+  <defs>
+    <symbol id="bouquet" viewBox="0 0 260 260">
+      <g fill="none" stroke="#68765e" stroke-width="3" stroke-linecap="round">
+        <path d="M20 245C65 190 87 126 126 30M48 245C89 190 130 143 183 72M10 220C70 183 133 171 230 154"/>
+        <path d="M64 207C33 193 20 166 23 145 51 151 72 174 64 207ZM95 159C67 146 58 119 65 99 91 111 105 135 95 159ZM143 118C119 92 124 66 141 49 159 73 160 99 143 118Z" fill="#879477"/>
+      </g>
+      <g fill="#702d42" stroke="#4b1e2d" stroke-width="2">
+        <path d="M33 118C10 99 20 69 48 66 52 38 88 36 99 60 125 62 132 91 111 106 106 132 74 142 58 124Z"/>
+        <path d="M120 74C102 55 111 31 133 29 145 8 173 17 176 38 197 49 190 76 170 83 157 103 130 96 120 74Z"/>
+        <path d="M164 139C148 122 156 99 178 97 190 78 216 88 218 108 238 120 229 145 208 151 195 170 173 160 164 139Z"/>
+      </g>
+      <g fill="#a85e72" opacity=".8">
+        <circle cx="67" cy="91" r="12"/>
+        <circle cx="151" cy="52" r="11"/>
+        <circle cx="195" cy="121" r="12"/>
+      </g>
+      <g fill="#fffdf8" stroke="#e8dfd1" stroke-width="2">
+        <path d="M83 205C61 184 67 150 93 133 115 118 139 127 145 148 122 143 106 162 109 184 111 198 99 210 83 205Z"/>
+        <path d="M117 174C101 146 115 117 145 111 170 105 188 124 184 145 168 128 145 137 139 158 135 172 126 180 117 174Z"/>
+      </g>
+      <g fill="#d5b46e">
+        <path d="M88 197l-7-21 10-18 8 19z"/>
+        <path d="M121 165l1-23 15-14 1 21z"/>
+      </g>
+      <g fill="#77836d" stroke="#68765e" stroke-width="2">
+        <path d="M31 239C3 222 2 198 14 181 40 194 48 218 31 239Z"/>
+        <path d="M202 222C197 193 213 175 238 175 240 202 226 220 202 222Z"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- NAVEGAÇÃO -->
 <nav>
   <a href="#inicio">Início</a>
   <a href="#historia">Nossa história</a>
@@ -528,7 +582,13 @@ footer h2{
   <a href="#presentes">Presentes</a>
 </nav>
 
+<!-- ABERTURA -->
 <header class="hero" id="inicio">
+  <svg class="floral floral-top-left" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-top-right" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-bottom-left" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-bottom-right" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+
   <div class="hero-inner">
     <div class="eyebrow">Com a bênção de Deus e ao lado de quem amamos</div>
     <h1>Victória <span class="amp">&</span> Diogo</h1>
@@ -538,7 +598,11 @@ footer h2{
   </div>
 </header>
 
+<!-- CONTAGEM REGRESSIVA -->
 <section class="center">
+  <svg class="floral floral-top-left" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-bottom-right" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+
   <div class="wrap">
     <div class="kicker">Reserve esta data</div>
     <h2>Estamos contando os dias</h2>
@@ -554,7 +618,11 @@ footer h2{
   </div>
 </section>
 
+<!-- NOSSA HISTÓRIA -->
 <section id="historia">
+  <svg class="floral floral-top-left" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-bottom-right" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+
   <div class="wrap story">
     <img src="assets/foto-casal.jpg" alt="Victória e Diogo juntos em frente à igreja">
 
@@ -568,7 +636,11 @@ footer h2{
   </div>
 </section>
 
+<!-- CELEBRAÇÃO -->
 <section class="events" id="celebracao">
+  <svg class="floral floral-top-left" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-bottom-right" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+
   <div class="wrap center">
     <div class="kicker">Cerimônia & recepção</div>
     <h2>Será uma alegria ter você conosco</h2>
@@ -595,7 +667,11 @@ footer h2{
   </div>
 </section>
 
+<!-- CONFIRMAÇÃO DE PRESENÇA -->
 <section id="rsvp">
+  <svg class="floral floral-top-left" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-bottom-right" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+
   <div class="wrap center">
     <div class="kicker">Confirmação de presença</div>
     <h2>Você vem celebrar com a gente?</h2>
@@ -635,7 +711,11 @@ footer h2{
   </div>
 </section>
 
+<!-- PRESENTES -->
 <section class="gifts" id="presentes">
+  <svg class="floral floral-top-left" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-bottom-right" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+
   <div class="wrap center">
     <div class="kicker">Lista de presentes</div>
     <h2>Faça parte dos nossos sonhos</h2>
@@ -647,7 +727,6 @@ footer h2{
     </p>
 
     <div class="gift-grid">
-
       <div class="gift">
         <h3>Um jantar especial</h3>
         <strong>R$ 150</strong><br>
@@ -683,7 +762,6 @@ footer h2{
         <strong>Você escolhe</strong><br>
         <button onclick="gift('Presente livre',0)">Presentear</button>
       </div>
-
     </div>
 
     <div class="pixnote">
@@ -718,7 +796,11 @@ footer h2{
   </div>
 </section>
 
+<!-- COMPARTILHAMENTO -->
 <section class="center">
+  <svg class="floral floral-top-left" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-bottom-right" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+
   <div class="wrap">
     <div class="kicker">Compartilhe este momento</div>
     <h2>Esperamos você!</h2>
@@ -727,7 +809,13 @@ footer h2{
   </div>
 </section>
 
+<!-- RODAPÉ -->
 <footer>
+  <svg class="floral floral-top-left" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-top-right" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-bottom-left" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+  <svg class="floral floral-bottom-right" viewBox="0 0 260 260" aria-hidden="true"><use href="#bouquet"/></svg>
+
   <div class="kicker">Com carinho</div>
   <h2>Victória & Diogo</h2>
   <p>18 de setembro de 2027</p>
